@@ -27,7 +27,7 @@ requirements:
     - python >=3.6
     - email-validator >=1.0.5
     - flask >=1.0.2
-    - flask_babelex >=0.9.3
+    - flask-babelex >=0.9.3
     - flask-login >=0.4.1
     - flask-principal >=0.4.0
     - flask-wtf >=0.14.2
