@@ -28,6 +28,7 @@ requirements:
     - flask-wtf >=0.14.3
     - itsdangerous >=1.1.0
     - passlib >=1.7.2
+    - blinker >=1.4
 
 test:
   imports:
