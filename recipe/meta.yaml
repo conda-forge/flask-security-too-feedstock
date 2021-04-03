@@ -1,5 +1,5 @@
 {% set name = "Flask-Security-Too" %}
-{% set version = "4.0.0" %}
+{% set version = "4.0.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4aa0a076fe0faabf01017d727e81fce0800170ce1cbf01534d16549fa6464d87
+  sha256: c2967fce08cbe2a1c6ada8eaafc717626d90f296efa7a17f859c13f46bfef1e0
 
 build:
   number: 0
@@ -28,6 +28,7 @@ requirements:
     - flask-wtf >=0.14.3
     - itsdangerous >=1.1.0
     - passlib >=1.7.2
+    - blinker >=1.4
 
 test:
   imports:
