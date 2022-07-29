@@ -1,5 +1,5 @@
 {% set name = "Flask-Security-Too" %}
-{% set version = "4.1.4" %}
+{% set version = "4.1.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8fa332d420fe198d889c794dd085cf70da9fabecad7680c3df2fb9b36a375912
+  sha256: f7c8ca7070efffe9a5b3b41559e1af19c9a860e182b29c4cef0e7fd918c9c683
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.6
     - email-validator >=1.1.1
-    - flask >=1.1.1
+    - flask >=1.1.1,<2.3
     - flask-login >=0.4.1
     - flask-principal >=0.4.0
     - flask-wtf >=0.14.3
