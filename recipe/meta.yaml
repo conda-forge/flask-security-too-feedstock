@@ -30,6 +30,7 @@ requirements:
     - passlib >=1.7.2
     - blinker >=1.4
     - wtforms >=3.0.0
+    - setuptools
 
 test:
   imports:
