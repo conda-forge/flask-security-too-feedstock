@@ -21,11 +21,12 @@ requirements:
     - python >=3.8
   run:
     - python >=3.8
-    - flask >=2.3
+    - flask >=2.3.2,<3.0.0
     - flask-login >=0.6.2
     - flask-principal >=0.4.0
-    - flask-wtf >=1.1.1
+    - flask-wtf >=1.1.2
     - email-validator >=1.1.1
+    - markupsafe >=2.1.0
     - passlib >=1.7.4
     - wtforms >=3.0.0
     - importlib_resources >=5.10.0
