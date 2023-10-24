@@ -1,5 +1,5 @@
 {% set name = "Flask-Security-Too" %}
-{% set version = "5.3.1" %}
+{% set version = "5.3.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1dafe00c611ce3811e7fe1686ecd7750938806a1ec3c5a278185f31958895d3c
+  sha256: c0b5075df0d64a9ef35b04c88d31fbf405a59243736f6d6d0a1a4b4845abf3e5
 
 build:
   number: 0
@@ -20,12 +20,13 @@ requirements:
     - pip
     - python >=3.8
   run:
+    - importlib-resources >=5.10.0
     - python >=3.8
-    - flask >=2.3.2,<3.0.0
+    - flask >=2.3.2
     - flask-login >=0.6.2
     - flask-principal >=0.4.0
     - flask-wtf >=1.1.2
-    - email-validator >=1.1.1
+    - email-validator >=2.0.0
     - markupsafe >=2.1.0
     - passlib >=1.7.4
     - wtforms >=3.0.0
