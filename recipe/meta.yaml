@@ -1,5 +1,5 @@
 {% set name = "Flask-Security-Too" %}
-{% set version = "5.3.2" %}
+{% set version = "5.3.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c0b5075df0d64a9ef35b04c88d31fbf405a59243736f6d6d0a1a4b4845abf3e5
+  sha256: c1ed93aae536f2a3ff8abe1e13aec9d0d95fb7ff082fcc3b372df2a5213970d9
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
   run:
     - importlib-resources >=5.10.0
     - python >=3.8
-    - flask >=2.3.2,<3.0.0
+    - flask >=2.3.2
     - flask-login >=0.6.2
     - flask-principal >=0.4.0
     - flask-wtf >=1.1.2
