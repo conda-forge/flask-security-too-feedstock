@@ -1,5 +1,5 @@
 {% set name = "Flask-Security-Too" %}
-{% set version = "5.4.0" %}
+{% set version = "5.4.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2c5688522fb70233ba1a8a54b9928dd19cb7268c843a904e3846193b9a266825
+  sha256: 032efe824fb3b94957b70d0b0ddb27bd26b6db3fb213a551d60baef509a216fc
 
 build:
   number: 0
