@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install . -vv
+  script: python -m pip install pyproject-too.toml -vv
 
 requirements:
   host:
