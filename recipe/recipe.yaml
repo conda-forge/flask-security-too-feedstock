@@ -49,7 +49,7 @@ tests:
 about:
   summary: Simple security for Flask apps.
   license: MIT
-  license_file: LICENSE
+  license_file: LICENSE.txt
   homepage: https://github.com/pallets-eco/flask-security
   documentation: https://flask-security.readthedocs.io/
 
