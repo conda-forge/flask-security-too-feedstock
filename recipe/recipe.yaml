@@ -13,13 +13,14 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m flit -f pyproject-too.toml --debug install --deps none
+  script: python -m flit -f pyproject-too.toml --debug install --deps=none
 
 requirements:
   host:
     - pip
     - python ${{ python_min }}
     - flit-core >=3.8,<4
+    - flit >=3.8,<4
   run:
     - python >=${{ python_min }}
     - flask >=3.0.0
