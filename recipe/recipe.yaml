@@ -45,6 +45,7 @@ tests:
     requirements:
       run:
         - python ${{ python_min }}
+        - setuptools  # passlib requires pkg_resources
 
 about:
   summary: Simple security for Flask apps.
