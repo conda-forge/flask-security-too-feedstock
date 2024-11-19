@@ -7,7 +7,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.io/packages/source/f/flask-security-too/flask_security_too-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/f/flask-security-too/flask_security_too-${{ version }}.tar.gz
   sha256: c697289fee71efb16223ee4d2632e113c311840fe32fe51e38f7a02ddc8637c3
 
 build:
