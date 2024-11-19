@@ -9,18 +9,19 @@ package:
 source:
   url: https://pypi.org/packages/source/f/flask-security-too/flask_security_too-${{ version }}.tar.gz
   sha256: c697289fee71efb16223ee4d2632e113c311840fe32fe51e38f7a02ddc8637c3
+  patches:
+    - rename-pyproject-toml.patch
 
 build:
   number: 0
   noarch: python
-  script: python -m flit -f pyproject-too.toml --debug install --deps=none
+  script: python -m pip install . -vv
 
 requirements:
   host:
     - pip
     - python ${{ python_min }}
     - flit-core >=3.8,<4
-    - flit >=3.8,<4
   run:
     - python >=${{ python_min }}
     - flask >=3.0.0

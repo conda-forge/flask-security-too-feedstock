@@ -1,0 +1,4 @@
+diff --git a/pyproject-too.toml b/pyproject.toml
+similarity index 100%
+rename from pyproject-too.toml
+rename to pyproject.toml
