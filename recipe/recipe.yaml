@@ -19,6 +19,7 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}
+    - flit_core >=3.8,<4
   run:
     - python >=${{ python_min }}
     - flask >=3.0.0
