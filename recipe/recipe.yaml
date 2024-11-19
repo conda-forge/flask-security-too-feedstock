@@ -1,0 +1,59 @@
+context:
+  version: 5.5.2
+  python_min: "3.9"
+
+package:
+  name: flask-security-too
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/f/flask-security-too/flask_security_too-${{ version }}.tar.gz
+  sha256: c697289fee71efb16223ee4d2632e113c311840fe32fe51e38f7a02ddc8637c3
+  patches:
+    - rename-pyproject-toml.patch
+
+build:
+  number: 0
+  noarch: python
+  script: python -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}
+    - flit-core >=3.8,<4
+  run:
+    - python >=${{ python_min }}
+    - flask >=3.0.0
+    - flask-login >=0.6.3
+    - flask-principal >=0.4.0
+    - flask-wtf >=1.1.2
+    - email-validator >=2.0.0
+    - markupsafe >=2.1.0
+    - passlib >=1.7.4
+    - wtforms >=3.0.0
+    - importlib_resources >=5.10.0
+
+tests:
+  - python:
+      imports:
+        - flask_security
+        - flask_security.models
+      pip_check: true
+  - script:
+      - python -c "import flask_security"
+    requirements:
+      run:
+        - python ${{ python_min }}
+        - setuptools  # passlib requires pkg_resources
+
+about:
+  summary: Simple security for Flask apps.
+  license: MIT
+  license_file: LICENSE.txt
+  homepage: https://github.com/pallets-eco/flask-security
+  documentation: https://flask-security.readthedocs.io/
+
+extra:
+  recipe-maintainers:
+    - synapticarbors

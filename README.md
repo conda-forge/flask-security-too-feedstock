@@ -3,13 +3,13 @@ About flask-security-too-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flask-security-too-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/Flask-Middleware/flask-security
+Home: https://github.com/pallets-eco/flask-security
 
 Package license: MIT
 
 Summary: Simple security for Flask apps.
 
-Documentation: https://flask-security-too.readthedocs.io/
+Documentation: https://flask-security.readthedocs.io/
 
 Current build status
 ====================
