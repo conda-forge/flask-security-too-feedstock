@@ -29,7 +29,7 @@ requirements:
     - flask-wtf >=1.1.2
     - email-validator >=2.3.0
     - markupsafe >=2.1.0
-    - passlib >=1.9.3
+    - libpass >=1.9.3
     - wtforms >=3.0.0
 
 tests:
