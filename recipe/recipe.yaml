@@ -1,6 +1,5 @@
 context:
-  version: 5.5.2
-  python_min: "3.9"
+  version: 5.8.0
 
 package:
   name: flask-security-too
@@ -8,31 +7,30 @@ package:
 
 source:
   url: https://pypi.org/packages/source/f/flask-security-too/flask_security_too-${{ version }}.tar.gz
-  sha256: c697289fee71efb16223ee4d2632e113c311840fe32fe51e38f7a02ddc8637c3
+  sha256: 4f72e5a7e6ee5eaafc20a89f2510407eefa0614cc695ac469d19f9dbaa4b6c43
   patches:
     - rename-pyproject-toml.patch
 
 build:
   number: 0
   noarch: python
-  script: python -m pip install . -vv
+  script: python -m pip install . -vv --no-build-isolation --no-deps
 
 requirements:
   host:
     - pip
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - flit-core >=3.8,<4
   run:
     - python >=${{ python_min }}
-    - flask >=3.0.0
+    - flask >=3.1.1
     - flask-login >=0.6.3
     - flask-principal >=0.4.0
     - flask-wtf >=1.1.2
-    - email-validator >=2.0.0
+    - email-validator >=2.3.0
     - markupsafe >=2.1.0
-    - passlib >=1.7.4
+    - libpass >=1.9.3
     - wtforms >=3.0.0
-    - importlib_resources >=5.10.0
 
 tests:
   - python:
@@ -40,12 +38,12 @@ tests:
         - flask_security
         - flask_security.models
       pip_check: true
+      python_version: ${{ python_min }}.*
   - script:
       - python -c "import flask_security"
     requirements:
       run:
-        - python ${{ python_min }}
-        - setuptools  # passlib requires pkg_resources
+        - python ${{ python_min }}.*
 
 about:
   summary: Simple security for Flask apps.
