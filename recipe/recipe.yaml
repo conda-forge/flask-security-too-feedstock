@@ -1,5 +1,5 @@
 context:
-  version: "5.8.1"
+  version: "5.8.2"
 
 package:
   name: flask-security-too
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/f/flask-security-too/flask_security_too-${{ version }}.tar.gz
-  sha256: 19450675a19055a3229b9ba5447491fa1233b41c0edf4917ea970222a15fc09e
+  sha256: b4ad7448a83679a9c255700bd28979c685e66f89dd7c2eca7de8f4a52e5bd89f
   patches:
     - rename-pyproject-toml.patch
 
@@ -38,12 +38,9 @@ tests:
         - flask_security
         - flask_security.models
       pip_check: true
-      python_version: ${{ python_min }}.*
-  - script:
-      - python -c "import flask_security"
-    requirements:
-      run:
-        - python ${{ python_min }}.*
+      python_version: 
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Simple security for Flask apps.
