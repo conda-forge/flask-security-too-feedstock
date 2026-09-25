@@ -1,5 +1,5 @@
 context:
-  version: "5.8.2"
+  version: 5.9.0
 
 package:
   name: flask-security-too
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/f/flask-security-too/flask_security_too-${{ version }}.tar.gz
-  sha256: b4ad7448a83679a9c255700bd28979c685e66f89dd7c2eca7de8f4a52e5bd89f
+  sha256: 116db335c35e46c60db3cb7efbf507ee13b24a70076ba095b3c1e2fc6945e92b
   patches:
     - rename-pyproject-toml.patch
 
@@ -30,17 +30,16 @@ requirements:
     - email-validator >=2.3.0
     - markupsafe >=2.1.0
     - libpass >=1.9.3
-    - wtforms >=3.0.0
-
+    - wtforms >=3.2.1
 tests:
   - python:
       imports:
         - flask_security
         - flask_security.models
       pip_check: true
-      python_version: 
+      python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 
 about:
   summary: Simple security for Flask apps.
