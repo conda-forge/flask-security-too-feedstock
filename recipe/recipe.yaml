@@ -1,5 +1,5 @@
 context:
-  version: 5.9.0
+  version: "5.9.1"
 
 package:
   name: flask-security-too
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/f/flask-security-too/flask_security_too-${{ version }}.tar.gz
-  sha256: 116db335c35e46c60db3cb7efbf507ee13b24a70076ba095b3c1e2fc6945e92b
+  sha256: 3e4eed39037061efaec370705d81687d30e5a26641944bc08d3524db9ba505e8
   patches:
     - rename-pyproject-toml.patch
 
